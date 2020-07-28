@@ -5,6 +5,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/xvii_dark_logo_512" />
+            android:src="@mipmap/ic_launcher" />
     </item>
 </layer-list>

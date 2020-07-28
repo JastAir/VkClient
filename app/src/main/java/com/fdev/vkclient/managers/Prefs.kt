@@ -63,7 +63,7 @@ object Prefs {
     }
 
     var pin: String
-        get() = data.getString(PIN, "")
+        get() = data.getString(PIN, "").toString()
         set(pin) = data.edit().putString(PIN, pin).apply()
 
     //data
@@ -184,7 +184,7 @@ object Prefs {
         get() {
             val res = ArrayList<Int>()
             val split = data
-                    .getString(MUTE_LIST, "")
+                    .getString(MUTE_LIST, "")!!
                     .split(",".toRegex())
                     .dropLastWhile { it.isEmpty() }
                     .toTypedArray()
@@ -220,7 +220,7 @@ object Prefs {
         set(value) = data.edit().putBoolean(USE_STYLED_NOTIFICATIONS, value).apply()
 
     var chatBack: String
-        get() = data.getString(CHAT_BACK, "")
+        get() = data.getString(CHAT_BACK, "").toString()
         set(value) = data.edit().putString(CHAT_BACK, value).apply()
 
     //other

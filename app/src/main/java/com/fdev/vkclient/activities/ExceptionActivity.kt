@@ -15,6 +15,7 @@ import com.fdev.vkclient.utils.*
 import com.fdev.vkclient.views.TextInputAlertDialog
 import kotlinx.android.synthetic.main.activity_exception.*
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import java.io.BufferedWriter
@@ -46,7 +47,7 @@ class ExceptionActivity : AppCompatActivity() {
         App.appComponent?.inject(this)
         var error = ""
         if (intent.extras != null) {
-            error = intent.extras.getString(ERROR)
+            error = intent.extras!!.getString(ERROR)!!
             tvStack.text = error
         }
         btnReport.setOnClickListener {
@@ -76,7 +77,7 @@ class ExceptionActivity : AppCompatActivity() {
         api.getDocUploadServer("doc")
                 .subscribeSmart({ uploadServer ->
                     val file = File(path)
-                    val requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file)
+                    val requestFile = RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file)
                     val body = MultipartBody.Part.createFormData("file", file.name, requestFile)
 
                     api.uploadDoc(uploadServer.uploadUrl ?: return@subscribeSmart, body)

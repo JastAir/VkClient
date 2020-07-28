@@ -40,7 +40,7 @@ class AccountsFragment : BaseFragment() {
         initRecyclerView()
         App.appComponent?.inject(this)
         viewModel = ViewModelProviders.of(this, viewModelFactory)[AccountsViewModel::class.java]
-        viewModel.getAccounts().observe(this, Observer { updateAccounts(it) })
+        viewModel.getAccounts().observe(viewLifecycleOwner, Observer { updateAccounts(it) })
         viewModel.loadAccounts()
 
         fabAdd.setOnClickListener {
@@ -67,13 +67,13 @@ class AccountsFragment : BaseFragment() {
         updateTitle(getString(R.string.accounts))
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         menu?.clear()
         inflater?.inflate(R.menu.menu_accounts, menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem) = when (item?.itemId) {
         R.id.menu_log_out -> {
             showConfirm(context, getString(R.string.wanna_logout)) { logout ->
                 if (logout) {

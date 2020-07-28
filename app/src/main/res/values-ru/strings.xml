@@ -65,7 +65,7 @@
     <string name="incorrect_pin">неверный</string>
     <string name="invite_chat">в чате</string>
     <string name="invite_chat_full">%s в чате</string>
-    <string name="join_us">подписывайтесь на официальную группу xvii вконтакте, чтобы получать свежие новости о приложении</string>
+    <string name="join_us">подписывайтесь на официальную группу VK Client вконтакте, чтобы получать свежие новости о приложении</string>
     <string name="key_exchanged">обмен ключами завершён</string>
     <string name="key_reset">ключи сброшены до стандартных</string>
     <string name="key_set">ключи установлены успешно</string>
@@ -113,7 +113,7 @@
     <string name="restart_app">перезагрузка приложения..</string>
     <string name="secure_length">используйте длинные фразы</string>
     <string name="settings">настройки</string>
-    <string name="share_on_wall">рассказать об xvii на стене</string>
+    <string name="share_on_wall">рассказать об VK Client на стене</string>
     <string name="shared">успешно отправлено на стену</string>
     <string name="show_content">показывать содержимое сообщения</string>
     <string name="led_lights">цвет led</string>
@@ -152,21 +152,21 @@
     <string name="clear_cache">очистить кэш</string>
     <string name="cache_cleared">кэш очищен</string>
     <string name="wanna_logout">действительно хотите выйти?</string>
-    <string name="generation_dh_hint">убедитесь, что ваш собеседний установил xvii и открыл секретный чат с вами. это необходимо для обмена ключами</string>
+    <string name="generation_dh_hint">убедитесь, что ваш собеседний установил VK Client и открыл секретный чат с вами. это необходимо для обмена ключами</string>
     <string name="key_xchg_failed">собеседник не поддержал обмен ключами. неудача!</string>
     <string name="decrypting_image">изображение расшифровывается</string>
     <string name="invalid_file">невозможно расшифровать файл</string>
     <string name="fingerprint">отпечаток</string>
     <string name="fingerprint_hint">это изображение и этот текст были получены из ключей шифрования. если они выглядят также на устройстве собеседника, и ключи были установлены, будьте уверены в приватности. в противном случае ваш диалог небезопасен!</string>
-    <string name="longpoll_explanation">начиная с android 8 (oreo), ос не позволяет запускать фоновые сервисы, единственным исключением являются сервисы google firebase. но api вконтакте не описывает собственный firebase, только longpoll. и этот longpoll требует постоянной работы фонового сервиса, и xvii приходится постоянно показывать уведомление, чтобы сервис работал</string>
+    <string name="longpoll_explanation">начиная с android 8 (oreo), ос не позволяет запускать фоновые сервисы, единственным исключением являются сервисы google firebase. но api вконтакте не описывает собственный firebase, только longpoll. и этот longpoll требует постоянной работы фонового сервиса, и VK Client приходится постоянно показывать уведомление, чтобы сервис работал</string>
 
     <string name="longpoll_guide_title">как убрать это уведомление</string>
-    <string name="longpoll_guide_step1">откройте панель уведомлений и нажмите и удеживайте уведомление \'фоновый сервис xvii\'</string>
+    <string name="longpoll_guide_step1">откройте панель уведомлений и нажмите и удеживайте уведомление \'фоновый сервис VK Client\'</string>
     <string name="longpoll_guide_step2">в контекстном меню нажмите на иконку (i) в верхнем правом углу</string>
-    <string name="longpoll_guide_step3">здесь вы увидите системные настройки \'xvii\'. нажмите на уведомления</string>
-    <string name="longpoll_guide_step4">уберите галочку с \'фонового сервиса xvii\' (но не трогайте другие!). на этом всё! </string>
+    <string name="longpoll_guide_step3">здесь вы увидите системные настройки \'VK Client\'. нажмите на уведомления</string>
+    <string name="longpoll_guide_step4">уберите галочку с \'фонового сервиса VK Client\' (но не трогайте другие!). на этом всё! </string>
 
-    <string name="like_app">нравится xvii?\nоцените прямо сейчас!</string>
+    <string name="like_app">нравится VK Client?\nоцените прямо сейчас!</string>
     <string name="not_now">не сейчас</string>
     <string name="never">никогда</string>
     <string name="unable_to_add_to_gallery">невозможно добавть в галерею. будет автоматически добавлена позже</string>
@@ -269,7 +269,7 @@
         <item> </item>
     </string-array>
 
-    <string name="aboutbig">xvii мессенджер (от twoeightnine)\nвер. %s от %s</string>
+    <string name="aboutbig">VK Client мессенджер (от fdev)\nвер. %s от %s</string>
     <string name="added_to_docs">успешно добавлено в документы</string>
     <string name="doc">документ</string>
 
@@ -308,8 +308,8 @@
     <string name="random_key_type">случайный (dhe)</string>
     <string name="no_access_to_mic">нет доступа к микрофону</string>
     <string name="no_access_to_storage">нет доступа к хранилищу</string>
-    <string name="need_access_to_mic">xvii необходим доступ к микрофону для записи голосовых сообщений</string>
-    <string name="need_access_to_storage">xvii необходим доступ к хранилищу для прикрепления и скачивания файлов</string>
+    <string name="need_access_to_mic">VK Client необходим доступ к микрофону для записи голосовых сообщений</string>
+    <string name="need_access_to_storage">VK Client необходим доступ к хранилищу для прикрепления и скачивания файлов</string>
     <string name="details">подробнее</string>
     <string name="report_hint">это поможет нам решить проблему быстрее</string>
     <string name="mark_as_read">отметить прочитанным</string>
@@ -317,7 +317,7 @@
     <string name="sticker">стикер</string>
     <string name="you_sender">вы:</string>
     <string name="audios">аудио</string>
-    <string name="app_name_music">xvii музыка</string>
+    <string name="app_name_music">Музыка</string>
     <string name="downloading_file">загрузка файла..</string>
     <string name="tap_to_provide_permissions">нажмите, чтобы разрешить</string>
     <string name="app_will_be_restarted">приложение будет перезапущено. продолжить?</string>
@@ -349,7 +349,7 @@
     <string name="unable_to_write">вы не можете писать сообщения этому пользователю</string>
     <string name="show_seconds">показывать секунды</string>
     <string name="longpoll_hint">нажмите, чтобы узнать больше</string>
-    <string name="xvii_longpoll">фоновый сервис xvii</string>
+    <string name="vk_client_longpoll">фоновый сервис VK Client</string>
     <string name="use_apple_emojis">использовать смайлики apple</string>
     <string name="summary">всего</string>
     <string name="show_voice">показывать иконку голосовых сообщений</string>
@@ -454,5 +454,6 @@
     <string name="forwarded_messages">пересланные сообщения</string>
     <string name="close">закрыть</string>
     <string name="playback_speed">скорость %sx</string>
+    <string name="profile">Профиль</string>
 
 </resources>

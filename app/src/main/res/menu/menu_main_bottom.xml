@@ -18,8 +18,8 @@
         android:title="@string/friends" />
 
     <item
-        android:id="@+id/menu_features"
+        android:id="@+id/menu_profile"
         android:icon="@drawable/ic_features_2"
-        android:title="@string/settings" />
+        android:title="@string/profile" />
 
 </menu>

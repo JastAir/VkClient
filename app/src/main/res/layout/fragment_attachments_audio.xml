@@ -12,7 +12,7 @@
         android:elevation="1dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="XVII MUSIC BETA. Stay tuned.."
+        android:text="VK CLIENT MUSIC BETA. Stay tuned.."
         android:textColor="@color/main_text"
         android:textStyle="bold" />
 

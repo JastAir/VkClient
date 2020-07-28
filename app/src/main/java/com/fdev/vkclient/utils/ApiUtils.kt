@@ -17,7 +17,7 @@ class ApiUtils @Inject constructor(val api: ApiService) {
                 .subscribeSmart({}, {})
     }
 
-    fun checkAccount(token: String, uid: Int, success: () -> Unit, fail: (String) -> Unit, later: (String) -> Unit) {
+    fun checkAccount(token: String?, uid: Int, success: () -> Unit, fail: (String) -> Unit, later: (String) -> Unit) {
         api.getUsers("$uid", User.FIELDS)
                 .subscribeSmart({
                     response ->

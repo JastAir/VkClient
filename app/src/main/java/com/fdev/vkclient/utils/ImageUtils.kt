@@ -172,7 +172,7 @@ class ImageUtils(private val activity: Activity) {
         val projection = arrayOf(column)
 
         try {
-            cursor = context.contentResolver.query(uri, projection, selection, selectionArgs, null)
+            cursor = uri?.let { context.contentResolver.query(it, projection, selection, selectionArgs, null) }
             if (cursor != null && cursor.moveToFirst()) {
                 val index = cursor.getColumnIndexOrThrow(column)
                 return cursor.getString(index)
@@ -252,7 +252,7 @@ class ImageUtils(private val activity: Activity) {
             Log.e("File Path", "Path " + file.path)
             Log.e("File Size", "Size " + file.length())
         } catch (e: Exception) {
-            Log.e("Exception", e.message)
+            Log.e("Exception", e.message.toString())
         }
 
         return file.path

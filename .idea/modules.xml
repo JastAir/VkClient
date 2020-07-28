@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/XVII.iml" filepath="$PROJECT_DIR$/.idea/XVII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VKClient.iml" filepath="$PROJECT_DIR$/.idea/modules/VKClient.iml" group="VKClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="VKClient/app" />
     </modules>
   </component>
 </project>

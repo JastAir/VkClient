@@ -28,7 +28,7 @@ class WebFragment : BaseFragment() {
                 return false // then it is not handled by default action
             }
         }
-        webView.loadUrl(url)
+        url?.let { webView.loadUrl(it) }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -37,9 +37,9 @@ class WebFragment : BaseFragment() {
         webView.setBottomInsetPadding()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        menu?.clear()
+        menu.clear()
     }
 
     companion object {

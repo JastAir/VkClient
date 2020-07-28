@@ -15,6 +15,7 @@ import com.fdev.vkclient.model.attachments.Doc
 import com.fdev.vkclient.network.ApiService
 import com.fdev.vkclient.utils.*
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import rx.Completable
@@ -96,7 +97,7 @@ class SecretChatViewModel(
                 .subscribeSmart({ uploadServer ->
                     crypto.encryptFile(context, path) { encryptedPath ->
                         val file = File(encryptedPath)
-                        val requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file)
+                        val requestFile = RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file)
                         val body = MultipartBody.Part.createFormData("file", file.name, requestFile)
                         api.uploadDoc(uploadServer.uploadUrl ?: "", body)
                                 .compose(applySchedulers())

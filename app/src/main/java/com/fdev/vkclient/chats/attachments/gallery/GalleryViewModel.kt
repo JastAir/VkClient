@@ -122,15 +122,17 @@ class GalleryViewModel(private val context: Context) : BaseAttachViewModel<Devic
                     "${MediaStore.MediaColumns.DATE_MODIFIED} DESC"
             )
             cursorVideos?.moveToFirst()
-            do {
-                val date = cursorVideos.getLong(cursorVideos.getColumnIndexOrThrow(MediaStore.Video.Media.DATE_MODIFIED))
-                val path = cursorVideos.getString(cursorVideos.getColumnIndexOrThrow(MediaStore.Video.Media.DATA))
-                val duration = cursorVideos.getLong(cursorVideos.getColumnIndexOrThrow(MediaStore.Video.VideoColumns.DURATION))
-                if (path != null) {
-                    videos.add(DeviceItem(date, path, DeviceItem.Type.VIDEO, duration))
-                }
-            } while (cursorVideos.moveToNext())
+            cursorVideos?.let { cv ->
+                do {
 
+                    val date = cv.getLong(cursorVideos.getColumnIndexOrThrow(MediaStore.Video.Media.DATE_MODIFIED))
+                    val path = cv.getString(cv.getColumnIndexOrThrow(MediaStore.Video.Media.DATA))
+                    val duration = cv.getLong(cv.getColumnIndexOrThrow(MediaStore.Video.VideoColumns.DURATION))
+                    if (path != null) {
+                        videos.add(DeviceItem(date, path, DeviceItem.Type.VIDEO, duration))
+                    }
+                } while (cv.moveToNext())
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         } finally {
@@ -160,10 +162,13 @@ class GalleryViewModel(private val context: Context) : BaseAttachViewModel<Devic
             )
             cursorImages?.moveToFirst()
             do {
-                val date = cursorImages.getLong(cursorImages.getColumnIndexOrThrow(MediaStore.Images.Media.DATE_MODIFIED))
-                val path = cursorImages.getString(cursorImages.getColumnIndexOrThrow(MediaStore.Images.Media.DATA))
+                val date = cursorImages?.getLong(cursorImages.getColumnIndexOrThrow(MediaStore.Images.Media.DATE_MODIFIED))
+                val path = cursorImages?.getString(cursorImages.getColumnIndexOrThrow(MediaStore.Images.Media.DATA))
                 if (path != null) {
-                    photos.add(DeviceItem(date, path, DeviceItem.Type.PHOTO))
+                    date?.let {
+                        DeviceItem(it, path, DeviceItem.Type.PHOTO) }?.let {
+                        photos.add(it)
+                    }
                     // png logging: tests
 //                    if (path.endsWith(".png")) {
 //                        val width = cursorImages.getInt(cursorImages.getColumnIndexOrThrow(MediaStore.MediaColumns.WIDTH))
@@ -171,7 +176,7 @@ class GalleryViewModel(private val context: Context) : BaseAttachViewModel<Devic
 //                        Lg.i("${width}x$height: $path")
 //                    }
                 }
-            } while (cursorImages.moveToNext())
+            } while (cursorImages?.moveToNext()!!)
 
         } catch (e: Exception) {
             e.printStackTrace()

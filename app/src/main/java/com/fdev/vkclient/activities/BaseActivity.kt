@@ -59,7 +59,7 @@ abstract class BaseActivity : AppCompatActivity() {
         window.navigationBarColor = getNavigationBarColor()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem) = when (item?.itemId) {
         android.R.id.home -> {
             onBackPressed()
             true

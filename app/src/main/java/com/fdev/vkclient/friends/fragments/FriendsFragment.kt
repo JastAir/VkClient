@@ -83,13 +83,13 @@ class FriendsFragment : BaseFragment() {
         viewModel.loadFriends(offset)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        menu?.clear()
-        inflater?.inflate(R.menu.user_list_menu, menu)
+        menu.clear()
+        inflater.inflate(R.menu.user_list_menu, menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId) {
             R.id.menu_search -> {
                 SearchActivity.launch(context)

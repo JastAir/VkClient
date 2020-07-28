@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchShowNotification"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -54,33 +54,33 @@
                     android:text="@string/show_notifications" />
 
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/show_message_content_hint"
                     android:text="@string/show_message_content" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchShowName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/show_senders_name_hint"
                     android:text="@string/show_senders_name" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchVibrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/vibrate" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchSound"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/make_sound" />
 
-                <com.twoeightnine.root.xvii.views.XviiColorSelect
+                <com.fdev.vkclient.views.XviiColorSelect
                     android:id="@+id/csLed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -113,33 +113,33 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchNotifsChats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/show_notifications_chats_hint"
                     android:text="@string/show_notifications" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchContentChats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/show_message_content_hint"
                     android:text="@string/show_message_content" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchVibrateChats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/vibrate" />
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchSoundChats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/make_sound" />
 
-                <com.twoeightnine.root.xvii.views.XviiColorSelect
+                <com.fdev.vkclient.views.XviiColorSelect
                     android:id="@+id/csLedChats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
 
                 </LinearLayout>
 
-                <com.twoeightnine.root.xvii.views.XviiSwitch
+                <com.fdev.vkclient.views.XviiSwitch
                     android:id="@+id/switchStylizeNotifications"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

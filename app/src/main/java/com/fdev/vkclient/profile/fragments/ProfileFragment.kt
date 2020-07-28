@@ -11,6 +11,7 @@ import com.fdev.vkclient.R
 import com.fdev.vkclient.base.BaseFragment
 import com.fdev.vkclient.chats.messages.chat.usual.ChatActivity
 import com.fdev.vkclient.managers.Prefs
+import com.fdev.vkclient.managers.Session
 import com.fdev.vkclient.model.User
 import com.fdev.vkclient.model.Wrapper
 import com.fdev.vkclient.model.attachments.Photo
@@ -29,6 +30,7 @@ class ProfileFragment : BaseFragment() {
     private lateinit var viewModel: ProfileViewModel
 
     private val userId by lazy { arguments?.getInt(ARG_USER_ID) ?: 0 }
+    private val userIsOwner by lazy { arguments?.getBoolean(ARG_USER_TYPE) ?: false }
 
     override fun getLayoutId() = R.layout.fragment_profile
 
@@ -144,11 +146,14 @@ class ProfileFragment : BaseFragment() {
     companion object {
 
         const val ARG_USER_ID = "userId"
+        const val ARG_USER_TYPE = "userType"
 
-        fun newInstance(userId: Int): ProfileFragment {
+        fun newInstance(userId: Int? = null): ProfileFragment {
+
             val fragment = ProfileFragment()
             fragment.arguments = Bundle().apply {
-                putInt(ARG_USER_ID, userId)
+                putInt(ARG_USER_ID, userId ?: Session.uid)
+                putBoolean(ARG_USER_TYPE, userId == null)
             }
             return fragment
         }

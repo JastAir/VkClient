@@ -24,7 +24,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="6dp"
                 android:gravity="center"
-                android:text="@string/xvii_longpoll"
+                android:text="@string/vk_client_longpoll"
                 android:textColor="@color/main_text"
                 android:textSize="28sp" />
 

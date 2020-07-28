@@ -9,7 +9,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.fdev.vkclient.App
-import com.fdev.vkclient.BuildConfig
 import com.fdev.vkclient.R
 import com.fdev.vkclient.accounts.activities.AccountsActivity
 import com.fdev.vkclient.accounts.models.Account
@@ -96,9 +95,9 @@ class FeaturesFragment : BaseFragment() {
         rlContribute.setVisible(time() - Prefs.lastAssistance > ASSISTANCE_DELAY)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        menu?.clear()
+        menu.clear()
     }
 
     private fun updateAccount(account: Account) {

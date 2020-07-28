@@ -48,21 +48,21 @@
                 android:background="@color/divider" />
 
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchLightTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/restart_required"
                 android:text="@string/light_theme" />
 
-            <com.twoeightnine.root.xvii.views.XviiColorSelect
+            <com.fdev.vkclient.views.XviiColorSelect
                 android:id="@+id/csThemeColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/restart_required"
                 android:text="@string/theme_color" />
 
-            <!--<com.twoeightnine.root.xvii.views.Stepper-->
+            <!--<com.fdev.xvii.views.Stepper-->
             <!--android:id="@+id/stMessageSize"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
@@ -72,35 +72,35 @@
             <!--app:text="@string/message_size"-->
             <!--app:value="15" />-->
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchShowSeconds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/show_seconds_hint"
                 android:text="@string/show_seconds" />
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchLowerTexts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/use_lowercase_hint"
                 android:text="@string/use_lowercase" />
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchAppleEmojis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/use_apples_emojis_hint"
                 android:text="@string/use_apples_emojis" />
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchShowStickers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/show_stickers_hint"
                 android:text="@string/show_stickers" />
 
-            <com.twoeightnine.root.xvii.views.XviiSwitch
+            <com.fdev.vkclient.views.XviiSwitch
                 android:id="@+id/switchShowVoice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -18,8 +18,8 @@ class MainPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
             add(SearchFragment.newInstance())
             add(DialogsFragment.newInstance())
             add(FriendsFragment.newInstance())
-            add(FeaturesFragment.newInstance())
-//            add(ProfileFragment.newInstance())
+//            add(FeaturesFragment.newInstance())
+            add(ProfileFragment.newInstance())
         }
     }
 

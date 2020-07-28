@@ -49,7 +49,7 @@ class StarredMessagesFragment : BaseMessagesFragment<StarredMessagesViewModel>()
         rvChatList.setBottomInsetPadding()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         menu?.clear()
     }

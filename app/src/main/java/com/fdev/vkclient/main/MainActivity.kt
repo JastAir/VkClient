@@ -83,8 +83,8 @@ class MainActivity : BaseActivity() {
 //        removeNotification(this)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        return when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
             R.id.home -> {
                 dlRoot.openDrawer(GravityCompat.START)
                 true
@@ -125,7 +125,7 @@ class MainActivity : BaseActivity() {
                     when (item.itemId) {
                         R.id.menu_search -> 0
                         R.id.menu_friends -> 2
-                        R.id.menu_features -> 3
+                        R.id.menu_profile -> 3
                         else -> 1 // default menu_dialogs
                     },
                     true

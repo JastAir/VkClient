@@ -39,7 +39,7 @@
             android:textSize="35sp"
             tools:text="●●●" />
 
-        <com.twoeightnine.root.xvii.views.PinPadView
+        <com.fdev.vkclient.views.PinPadView
             android:id="@+id/pinPad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

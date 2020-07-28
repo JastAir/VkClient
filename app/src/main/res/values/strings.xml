@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">xvii</string>
-    <string name="app_name_music">xvii music</string>
+    <string name="app_name" translatable="false">VK Client</string>
+    <string name="app_name_music">Music</string>
     <string name="about_app">about</string>
     <string name="settings">settings</string>
     <string name="addons">add-ons</string>
-    <string name="share_on_wall">share xvii on my wall</string>
+    <string name="share_on_wall">share app on my wall</string>
     <string name="donate">donate</string>
     <string name="share">share</string>
     <string name="share_image">share the image</string>
@@ -71,7 +71,7 @@
     <string name="alias">alias</string>
     <string name="unmark">unmark</string>
     <string name="read">read</string>
-    <string name="join_us">follow xvii official group in vk for getting the freshest news about app</string>
+    <string name="join_us">follow app official group in vk for getting the freshest news about app</string>
     <string name="stickers">stickers</string>
     <string name="download">download</string>
     <string name="downloading">downloading</string>
@@ -202,7 +202,7 @@
     <string name="clear_cache">clear cache</string>
     <string name="cache_cleared">cache cleared</string>
     <string name="wanna_logout">really want to log out?</string>
-    <string name="like_app">do you like xvii?\nrate it now!</string>
+    <string name="like_app">do you like app?\nrate it now!</string>
     <string name="not_now">not now</string>
     <string name="never">never</string>
     <string name="private_messages_notifs">private messages</string>
@@ -214,7 +214,7 @@
     <string name="edit_message">edit message</string>
     <string name="unable_to_edit_message">unable to edit this message</string>
     <string name="unable_to_add_to_gallery">unable to add to gallery. it will be added automatically later</string>
-    <string name="generation_dh_hint">make sure your interlocutor has installed xvii and opened the secret chat with you. it is necessary for key exchange</string>
+    <string name="generation_dh_hint">make sure your interlocutor has installed VK Client and opened the secret chat with you. it is necessary for key exchange</string>
     <string name="key_xchg_failed">the interlocutor have not supported the exchange. failed!</string>
     <string name="fingerprint">fingerprint</string>
     <string name="decrypting_image">image is being decrypted</string>
@@ -239,7 +239,7 @@
     <string name="report_hint">it will help us to solve the problem faster</string>
     <string name="app_will_be_restarted">app will be restarted. continue?</string>
     <string name="accounts_hint">tap to manage</string>
-    <string name="sample_text" translatable="false">xvii</string>
+    <string name="sample_text" translatable="false">VK Client</string>
     <string name="search_hint">search</string>
     <string name="ok" translatable="false">ok</string>
     <string name="join">follow</string>
@@ -259,9 +259,9 @@
 
     <string name="no_access_to_mic">no access to the mic</string>
     <string name="no_access_to_storage">no access to the storage</string>
-    <string name="need_access_to_mic">xvii needs an access to the mic to provide the feature of voice messaging</string>
-    <string name="need_access_to_storage">xvii needs an access to the storage to provide the feature of attaching and saving media files</string>
-    <string name="tap_to_provide_permissions">tap here to allow xvii to use your storage</string>
+    <string name="need_access_to_mic">VK Client needs an access to the mic to provide the feature of voice messaging</string>
+    <string name="need_access_to_storage">VK Client needs an access to the storage to provide the feature of attaching and saving media files</string>
+    <string name="tap_to_provide_permissions">tap here to allow VK Client to use your storage</string>
     <string name="want_to_scream" translatable="false">you want to scream?</string>
     <string name="really_want_to_scream" translatable="false">really want to scream out loud?</string>
     <string name="scream_now" translatable="false">so be ready for aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</string>
@@ -327,15 +327,15 @@
     <string name="gift_for_you">gift</string>
     <string name="unable_to_pick_file">unable to pick this file. try to select other one or write in support</string>
 
-    <string name="xvii_longpoll">xvii background service</string>
+    <string name="vk_client_longpoll">VK Client background service</string>
     <string name="longpoll_hint">tap to find out more</string>
-    <string name="longpoll_explanation">since android 8 (oreo) the os doesn\'t allow to run background services and the only exception is firebase services. but vk administration didn\'t publish api for its own firebase cloud messaging. vk\'s longpoll requires a custom service and xvii needs to show this notification all the time to keep the background service running</string>
+    <string name="longpoll_explanation">since android 8 (oreo) the os doesn\'t allow to run background services and the only exception is firebase services. but vk administration didn\'t publish api for its own firebase cloud messaging. vk\'s longpoll requires a custom service and VK Client needs to show this notification all the time to keep the background service running</string>
 
     <string name="longpoll_guide_title">how to remove this notification</string>
-    <string name="longpoll_guide_step1">open notifications panel and press and hold on \'xvii background service\' notification</string>
+    <string name="longpoll_guide_step1">open notifications panel and press and hold on \'VK Client background service\' notification</string>
     <string name="longpoll_guide_step2">in the context menu press on (i) icon in the top right corner</string>
-    <string name="longpoll_guide_step3">here you will see \'xvii\' system settings. tap on notifications</string>
-    <string name="longpoll_guide_step4">remove check from \'xvii background service\' property (do not touch other ones!). that\'s all! </string>
+    <string name="longpoll_guide_step3">here you will see \'VK Client\' system settings. tap on notifications</string>
+    <string name="longpoll_guide_step4">remove check from \'VK Client background service\' property (do not touch other ones!). that\'s all! </string>
 
     <string name="wanna_kick_user">do you really want to kick %s?</string>
     <string name="leave_conversation">leave</string>
@@ -436,7 +436,7 @@
         <item quantity="other">%s votes</item>
     </plurals>
 
-    <string name="aboutbig">xvii messenger (by twoeightnine)\nver. %s since %s</string>
+    <string name="aboutbig">VK Client messenger (by fdev)\nver. %s since %s</string>
 
     <string name="faces">faces</string>
     <string name="animals">animals</string>
@@ -471,6 +471,7 @@
     <string name="yellow">yellow</string>
     <string name="magenta">magenta</string>
     <string name="white">white</string>
+    <string name="profile">Profile</string>
 
 </resources>
 

@@ -78,26 +78,6 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/toolbar"
-                android:orientation="vertical"
-                android:tag="extraLight">
-
-                <TextView
-                    style="@style/OtherText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="56dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="28dp"
-                    android:paddingBottom="8dp"
-                    android:text="@string/addons"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
             <RelativeLayout
                 android:id="@+id/rlAnalyse"
                 android:layout_width="match_parent"
@@ -445,28 +425,6 @@
                     android:textSize="17sp" />
 
             </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/toolbar"
-                android:orientation="vertical"
-                android:tag="extraLight">
-
-                <TextView
-                    android:id="@+id/tvAbout"
-                    style="@style/OtherText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingStart="12dp"
-                    android:paddingTop="8dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="8dp"
-                    android:text="@string/aboutbig"
-                    android:textSize="13sp" />
-
-            </LinearLayout>
 
         </LinearLayout>
 

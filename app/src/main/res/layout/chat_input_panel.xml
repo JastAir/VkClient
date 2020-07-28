@@ -61,7 +61,7 @@
 
         </RelativeLayout>
 
-        <com.twoeightnine.root.xvii.views.emoji.EmojiEditText
+        <com.fdev.vkclient.views.emoji.EmojiEditText
             android:id="@+id/etInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
