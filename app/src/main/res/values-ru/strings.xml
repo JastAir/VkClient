@@ -166,7 +166,7 @@
     <string name="longpoll_guide_step3">здесь вы увидите системные настройки \'VK Client\'. нажмите на уведомления</string>
     <string name="longpoll_guide_step4">уберите галочку с \'фонового сервиса VK Client\' (но не трогайте другие!). на этом всё! </string>
 
-    <string name="like_app">нравится VK Client?\nоцените прямо сейчас!</string>
+    <string name="like_app">Нравится VK Client?\nОцените прямо сейчас!</string>
     <string name="not_now">не сейчас</string>
     <string name="never">никогда</string>
     <string name="unable_to_add_to_gallery">невозможно добавть в галерею. будет автоматически добавлена позже</string>

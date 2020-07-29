@@ -13,6 +13,8 @@ import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import com.fdev.vkclient.R
 import com.fdev.vkclient.activities.BaseActivity
+import com.fdev.vkclient.activities.ContentActivity
+import com.fdev.vkclient.features.FeaturesFragment
 import com.fdev.vkclient.utils.stylize
 import kotlinx.android.synthetic.main.toolbar.*
 

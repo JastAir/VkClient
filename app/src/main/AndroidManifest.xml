@@ -2,88 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fdev.vkclient">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-
     <application
-        android:name="com.fdev.vkclient.App"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.fdev.vkclient.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="${adAppId}"/>
-
-
-        <receiver
-            android:name="com.fdev.vkclient.background.longpoll.receivers.RestarterBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="restartAction" />
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name="com.fdev.vkclient.background.longpoll.receivers.MarkAsReadBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="markAsReadAction" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.fdev.vkclient.background.music.services.MusicBroadcastReceiver" />
-
-        <!--<service android:name=".background.LongPollService" />-->
-
-        <service android:name="com.fdev.vkclient.background.longpoll.services.NotificationService" />
-
-        <service android:name="com.fdev.vkclient.crypto.prime.PrimeGeneratorService" />
-        <service
-            android:name="com.fdev.vkclient.background.longpoll.services.NotificationJobIntentService"
-            android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service
-            android:name="com.fdev.vkclient.crypto.prime.PrimeGeneratorJobIntentService"
-            android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service
-            android:name="com.fdev.vkclient.background.music.services.MusicService"
-            android:permission="android.permission.WAKE_LOCK" />
-        <service android:name="com.fdev.vkclient.background.DownloadFileService" />
+        <activity android:name=".features.FeaturesActivity"></activity>
 
         <activity
             android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <activity
@@ -93,25 +30,22 @@
         <activity
             android:name=".photoviewer.ImageViewerActivity"
             android:theme="@style/AppTheme.Transparent.Photo" />
-
         <activity
             android:name=".web.GifViewerActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".web.VideoViewerActivity"
-            android:theme="@style/AppTheme.Transparent.Photo" />
-
+            android:theme="@style/AppTheme.Transparent.Photo" /> <!-- <service android:name=".background.LongPollService" /> -->
         <activity
             android:name=".activities.ExceptionActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".chats.messages.chat.usual.ChatActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -127,6 +61,7 @@
         <activity
             android:name=".chats.attachments.audios.AudiosActivity"
             android:theme="@style/AppTheme.Transparent" />
+
         <activity
             android:name=".search.SearchActivity"
             android:screenOrientation="portrait" />
@@ -161,12 +96,16 @@
             android:theme="@style/AppTheme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -202,11 +141,65 @@
             android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".features.assist.AssistActivity"
-            android:theme="@style/AppTheme.Transparent"/>
+            android:theme="@style/AppTheme.Transparent" />
         <activity
             android:name=".pin.fake.alarm.AlarmActivity"
-            android:theme="@style/AppTheme.Transparent"/>
-
+            android:theme="@style/AppTheme.Transparent" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${adAppId}" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fdev.vkclient.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <receiver
+            android:name=".background.longpoll.receivers.RestarterBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="restartAction" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".background.longpoll.receivers.MarkAsReadBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="markAsReadAction" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".background.music.services.MusicBroadcastReceiver" />
+        <service android:name=".background.longpoll.services.NotificationService" />
+        <service android:name=".crypto.prime.PrimeGeneratorService" />
+        <service
+            android:name=".background.longpoll.services.NotificationJobIntentService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".crypto.prime.PrimeGeneratorJobIntentService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".background.music.services.MusicService"
+            android:permission="android.permission.WAKE_LOCK" />
+        <service android:name=".background.DownloadFileService" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
 
 </manifest>

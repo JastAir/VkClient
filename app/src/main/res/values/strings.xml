@@ -1,4 +1,53 @@
 <resources>
+    <plurals name="attach">
+        <item quantity="one">%d attachment</item>
+        <item quantity="other">%d attachments</item>
+    </plurals>
+    <plurals name="attachments">
+        <item quantity="one">%d attachment</item>
+        <item quantity="other">%d attachments</item>
+    </plurals>
+    <plurals name="attachments_photos">
+        <item quantity="one">%d photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    <plurals name="attachments_audios">
+        <item quantity="one">%d audio</item>
+        <item quantity="other">%d audios</item>
+    </plurals>
+    <plurals name="attachments_videos">
+        <item quantity="one">%d video</item>
+        <item quantity="other">%d videos</item>
+    </plurals>
+    <plurals name="attachments_docs">
+        <item quantity="one">%d document</item>
+        <item quantity="other">%d documents</item>
+    </plurals>
+    <plurals name="messages">
+        <item quantity="one">%d message</item>
+        <item quantity="other">%d messages</item>
+    </plurals>
+    <plurals name="friends">
+        <item quantity="one">%s friend</item>
+        <item quantity="other">%s friends</item>
+    </plurals>
+    <plurals name="mutual_friends">
+        <item quantity="one">%d mutual friend</item>
+        <item quantity="other">%d mutual friends</item>
+    </plurals>
+
+    <plurals name="followers">
+        <item quantity="one">%s follower</item>
+        <item quantity="other">%s followers</item>
+    </plurals>
+    <plurals name="participants">
+        <item quantity="one">%s participant</item>
+        <item quantity="other">%s participants</item>
+    </plurals>
+    <plurals name="votes">
+        <item quantity="one">%s vote</item>
+        <item quantity="other">%s votes</item>
+    </plurals>
     <string name="app_name" translatable="false">VK Client</string>
     <string name="app_name_music">Music</string>
     <string name="about_app">about</string>
@@ -8,7 +57,6 @@
     <string name="donate">donate</string>
     <string name="share">share</string>
     <string name="share_image">share the image</string>
-
     <string name="last_seen">last seen: %s</string>
     <string name="online_seen">online: %s</string>
     <string name="status">status</string>
@@ -202,7 +250,7 @@
     <string name="clear_cache">clear cache</string>
     <string name="cache_cleared">cache cleared</string>
     <string name="wanna_logout">really want to log out?</string>
-    <string name="like_app">do you like app?\nrate it now!</string>
+    <string name="like_app">Do you like app?\nRate it now!</string>
     <string name="not_now">not now</string>
     <string name="never">never</string>
     <string name="private_messages_notifs">private messages</string>
@@ -215,6 +263,7 @@
     <string name="unable_to_edit_message">unable to edit this message</string>
     <string name="unable_to_add_to_gallery">unable to add to gallery. it will be added automatically later</string>
     <string name="generation_dh_hint">make sure your interlocutor has installed VK Client and opened the secret chat with you. it is necessary for key exchange</string>
+
     <string name="key_xchg_failed">the interlocutor have not supported the exchange. failed!</string>
     <string name="fingerprint">fingerprint</string>
     <string name="decrypting_image">image is being decrypted</string>
@@ -227,7 +276,6 @@
     <string name="random_key_type">random (dhe)</string>
     <string name="fingerprint_hint">this image and this text were generated from the encryption key. if they look the same on your interlocutor\'s device and the keys were set, be sure that no one breaks your privacy. otherwise your conversation is not secure!</string>
     <string name="quote" translatable="false">you are <b>not</b> your job. you\'re <b>not</b> how much money you have in the bank. you\'re <b>not</b> the car you drive. you\'re <b>not</b> the contents of your wallet..</string>
-
     <string name="sticker">sticker</string>
     <string name="graffiti">graffiti</string>
     <string name="you_sender">you:</string>
@@ -244,6 +292,7 @@
     <string name="ok" translatable="false">ok</string>
     <string name="join">follow</string>
     <string name="cancel">cancel</string>
+
     <string name="too_deep_forwarding">tap to see fully</string>
     <string name="request">request</string>
     <string name="summary">summary</string>
@@ -255,8 +304,8 @@
     <string name="profile_deactivated">this profile is deactivated</string>
     <string name="profile_closed">this profile is closed</string>
     <string name="profile_blacklisted_you">you are in the user\'s black list</string>
-    <string name="group_closed">this community is closed</string>
 
+    <string name="group_closed">this community is closed</string>
     <string name="no_access_to_mic">no access to the mic</string>
     <string name="no_access_to_storage">no access to the storage</string>
     <string name="need_access_to_mic">VK Client needs an access to the mic to provide the feature of voice messaging</string>
@@ -268,7 +317,6 @@
     <string name="vote">send vote</string>
     <string name="unable_to_vote">unable to add vote</string>
     <string name="vote_added">vote added</string>
-
     <string name="be_offline">be offline</string>
     <string name="be_offline_hint">set offline status automatically</string>
     <string name="be_online">be online</string>
@@ -285,6 +333,7 @@
     <string name="show_seconds_hint">time stamps will be with seconds</string>
     <string name="use_lowercase">use lower case</string>
     <string name="use_lowercase_hint">names and inputs will be in lower case</string>
+
     <string name="use_apples_emojis">use apple\'s emojis</string>
     <string name="use_apples_emojis_hint">use the most common and recognizable emojis</string>
     <string name="show_stickers">show stickers/emojis icon</string>
@@ -296,8 +345,8 @@
     <string name="swipe_to_back">enable swipe-to-finish gesture</string>
     <string name="swipe_to_back_hint">finishing screens using swipe from the left edge</string>
     <string name="lift_keyboards">lift the stickers keyboard</string>
-    <string name="lift_keyboards_hint">turn on if there are a gap between keyboard and input</string>
 
+    <string name="lift_keyboards_hint">turn on if there are a gap between keyboard and input</string>
     <string name="show_notifications">show notifications</string>
     <string name="show_notifications_private_hint">from private chats</string>
     <string name="show_notifications_chats_hint">from public conversations</string>
@@ -308,14 +357,16 @@
     <string name="use_styled_notifications">use stylish notifications</string>
     <string name="use_styled_notifications_hint">notifications will be painted according to users\' avatars</string>
     <string name="vibrate">enable vibration</string>
-    <string name="make_sound">enable sound</string>
 
+    <string name="make_sound">enable sound</string>
     <string name="light_theme">light theme</string>
     <string name="apply_color_for_notifications" translatable="false">apply color for notifications</string>
     <string name="apply_color_for_notifications_hint" translatable="false">notification\'s background will not be white</string>
+
     <string name="theme_color">theme color</string>
     <string name="restart_required">restart required to apply changes</string>
     <string name="pick_chat_background">pick chat background</string>
+
     <string name="appearance_sample">this is the sample of how the chats will look like. change appearance according to your preferences</string>
     <string name="appearance_sample_in" translatable="false">hey😁, how is it in stockholm?</string>
     <string name="appearance_sample_out" translatable="false">hi, great, thanks❤️. it\'s rainy so i stay at the hotel😂 how is your being🤔?</string>
@@ -326,35 +377,82 @@
     <string name="message_size" translatable="false">message text size</string>
     <string name="gift_for_you">gift</string>
     <string name="unable_to_pick_file">unable to pick this file. try to select other one or write in support</string>
-
     <string name="vk_client_longpoll">VK Client background service</string>
     <string name="longpoll_hint">tap to find out more</string>
     <string name="longpoll_explanation">since android 8 (oreo) the os doesn\'t allow to run background services and the only exception is firebase services. but vk administration didn\'t publish api for its own firebase cloud messaging. vk\'s longpoll requires a custom service and VK Client needs to show this notification all the time to keep the background service running</string>
-
     <string name="longpoll_guide_title">how to remove this notification</string>
+
     <string name="longpoll_guide_step1">open notifications panel and press and hold on \'VK Client background service\' notification</string>
     <string name="longpoll_guide_step2">in the context menu press on (i) icon in the top right corner</string>
     <string name="longpoll_guide_step3">here you will see \'VK Client\' system settings. tap on notifications</string>
     <string name="longpoll_guide_step4">remove check from \'VK Client background service\' property (do not touch other ones!). that\'s all! </string>
-
     <string name="wanna_kick_user">do you really want to kick %s?</string>
+
     <string name="leave_conversation">leave</string>
     <string name="wanna_leave_conversation">do you really want to leave this conversation?</string>
+
     <string name="clear_vote">clear my vote</string>
+
     <string name="open_in_browser">open in browser</string>
+
     <string name="unable_to_crop">unable to crop this image as a background. try to select other one</string>
+
     <string name="close">close</string>
+
     <string name="playback_speed">speed %sx</string>
 
     <string name="assist_prompt">you are about to watch a fullscreen advertising. it is absolutely free to you but watching this is your opportunity to thank the developer for this app. do you want to continue and watch?</string>
+
     <string name="assist_yes">yes, i\'m in</string>
+
     <string name="assist_no">no, get back</string>
+
     <string name="assist_hint">ad is being loaded\nand will be shown soon..</string>
+
     <string name="assist_thank_you">thank you for contributing!</string>
 
     <string name="alarm_title">alarms</string>
+
     <string name="alarm_every_day">every day</string>
 
+    <string name="aboutbig">VK Client messenger (by fdev)\nver. %s since %s</string>
+
+    <string name="faces">faces</string>
+
+    <string name="animals">animals</string>
+
+    <string name="food">food</string>
+    <string name="nature">nature</string>
+    <string name="people">people</string>
+    <string name="symbols">symbols</string>
+    <string name="other">other</string>
+    <string name="recent">recent</string>
+    <string name="online">online</string>
+    <string name="offline">offline</string>
+
+
+    <string name="error_1">unknown method passed</string>
+    <string name="error_5">user authorisation failed</string>
+
+    <string name="error_6">too many requests per second</string>
+    <string name="error_7">permission to perform this action is denied</string>
+    <string name="error_9">flood control</string>
+    <string name="error_10">internal server error</string>
+    <string name="error_14">captcha needed</string>
+    <string name="error_15">access denied</string>
+    <string name="error_17">validation required</string>
+    <string name="error_200plus">access denied</string>
+    <string name="error_500plus">permission denied</string>
+    <string name="no_color">no color</string>
+    <string name="red">red</string>
+
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="cyan">cyan</string>
+    <string name="yellow">yellow</string>
+    <string name="magenta">magenta</string>
+    <string name="white">white</string>
+    <string name="profile">Profile</string>
     <string-array name="relations">
         <item>single</item>
         <item>in a relationship</item>
@@ -365,7 +463,6 @@
         <item>in love</item>
         <item>in civil union</item>
     </string-array>
-
     <string-array name="devices">
         <item>via mobile</item>
         <item>via iphone</item>
@@ -375,103 +472,6 @@
         <item>via win8</item>
         <item> </item>
     </string-array>
-
-    <plurals name="attach">
-        <item quantity="one">%d attachment</item>
-        <item quantity="other">%d attachments</item>
-    </plurals>
-
-    <plurals name="attachments">
-        <item quantity="one">%d attachment</item>
-        <item quantity="other">%d attachments</item>
-    </plurals>
-
-    <plurals name="attachments_photos">
-        <item quantity="one">%d photo</item>
-        <item quantity="other">%d photos</item>
-    </plurals>
-
-    <plurals name="attachments_audios">
-        <item quantity="one">%d audio</item>
-        <item quantity="other">%d audios</item>
-    </plurals>
-
-    <plurals name="attachments_videos">
-        <item quantity="one">%d video</item>
-        <item quantity="other">%d videos</item>
-    </plurals>
-
-    <plurals name="attachments_docs">
-        <item quantity="one">%d document</item>
-        <item quantity="other">%d documents</item>
-    </plurals>
-
-    <plurals name="messages">
-        <item quantity="one">%d message</item>
-        <item quantity="other">%d messages</item>
-    </plurals>
-
-    <plurals name="friends">
-        <item quantity="one">%s friend</item>
-        <item quantity="other">%s friends</item>
-    </plurals>
-
-    <plurals name="mutual_friends">
-        <item quantity="one">%d mutual friend</item>
-        <item quantity="other">%d mutual friends</item>
-    </plurals>
-
-    <plurals name="followers">
-        <item quantity="one">%s follower</item>
-        <item quantity="other">%s followers</item>
-    </plurals>
-
-    <plurals name="participants">
-        <item quantity="one">%s participant</item>
-        <item quantity="other">%s participants</item>
-    </plurals>
-
-    <plurals name="votes">
-        <item quantity="one">%s vote</item>
-        <item quantity="other">%s votes</item>
-    </plurals>
-
-    <string name="aboutbig">VK Client messenger (by fdev)\nver. %s since %s</string>
-
-    <string name="faces">faces</string>
-    <string name="animals">animals</string>
-    <string name="food">food</string>
-    <string name="nature">nature</string>
-    <string name="people">people</string>
-    <string name="symbols">symbols</string>
-    <string name="other">other</string>
-    <string name="recent">recent</string>
-
-
-    <string name="online">online</string>
-    <string name="offline">offline</string>
-
-    <string name="error_1">unknown method passed</string>
-    <string name="error_5">user authorisation failed</string>
-    <string name="error_6">too many requests per second</string>
-    <string name="error_7">permission to perform this action is denied</string>
-    <string name="error_9">flood control</string>
-    <string name="error_10">internal server error</string>
-    <string name="error_14">captcha needed</string>
-    <string name="error_15">access denied</string>
-    <string name="error_17">validation required</string>
-    <string name="error_200plus">access denied</string>
-    <string name="error_500plus">permission denied</string>
-
-    <string name="no_color">no color</string>
-    <string name="red">red</string>
-    <string name="green">green</string>
-    <string name="blue">blue</string>
-    <string name="cyan">cyan</string>
-    <string name="yellow">yellow</string>
-    <string name="magenta">magenta</string>
-    <string name="white">white</string>
-    <string name="profile">Profile</string>
 
 </resources>
 

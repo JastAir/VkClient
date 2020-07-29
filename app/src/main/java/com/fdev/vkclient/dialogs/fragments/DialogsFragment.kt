@@ -19,6 +19,7 @@ import com.fdev.vkclient.utils.*
 import com.fdev.vkclient.utils.contextpopup.ContextPopupItem
 import com.fdev.vkclient.utils.contextpopup.createContextPopup
 import com.fdev.vkclient.views.TextInputAlertDialog
+import kotlinx.android.synthetic.main.activity_root.view.*
 import kotlinx.android.synthetic.main.fragment_dialogs.*
 import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
@@ -43,7 +44,6 @@ open class DialogsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
-        toolbar.hide()
 
         progressBar.show()
         swipeRefresh.setOnRefreshListener {

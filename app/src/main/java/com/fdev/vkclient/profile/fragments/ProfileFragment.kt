@@ -10,6 +10,8 @@ import com.fdev.vkclient.App
 import com.fdev.vkclient.R
 import com.fdev.vkclient.base.BaseFragment
 import com.fdev.vkclient.chats.messages.chat.usual.ChatActivity
+import com.fdev.vkclient.features.FeaturesActivity
+import com.fdev.vkclient.features.FeaturesFragment
 import com.fdev.vkclient.managers.Prefs
 import com.fdev.vkclient.managers.Session
 import com.fdev.vkclient.model.User
@@ -49,7 +51,7 @@ class ProfileFragment : BaseFragment() {
 
     private fun stylize() {
         if (Prefs.isLightTheme) {
-            rlBack.stylizeColor()
+//            rlBack.stylizeColor()
             llHeader.setBackgroundColor(Color.WHITE)
             llContainer.setBackgroundColor(Color.WHITE)
             llCounters.stylize()
@@ -80,6 +82,8 @@ class ProfileFragment : BaseFragment() {
         llContainer.removeAllViews()
         civPhoto.load(user.photoMax)
         civPhoto.setOnClickListener { viewModel.loadPhotos(::onPhotosLoaded) }
+        flSettings.setOnClickListener { FeaturesActivity.launch(context) }
+
         tvName.text = user.fullName
         if (Prefs.lowerTexts) tvName.lower()
         rlChat.setOnClickListener { ChatActivity.launch(context, user) }

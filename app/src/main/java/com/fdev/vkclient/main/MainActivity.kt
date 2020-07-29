@@ -52,6 +52,7 @@ class MainActivity : BaseActivity() {
                 Lg.i("open chat $userId")
             }
         }
+
         startNotificationAlarm(this)
         apiUtils.trackVisitor()
         stylize(isWhite = true)

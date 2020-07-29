@@ -45,7 +45,7 @@ class WallPostFragment : BaseFragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.menu_wall_post, menu)
+        inflater.inflate(R.menu.menu_wall_post, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

@@ -1,11 +1,14 @@
 package com.fdev.vkclient.features
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.fdev.vkclient.App
@@ -50,22 +53,33 @@ class FeaturesFragment : BaseFragment() {
         viewModel.getAccount().observe(this, Observer { updateAccount(it) })
         viewModel.loadAccount()
 
-        rlAnalyse.setOnClickListener { showToast(context, R.string.in_future_versions) }
-        rlStarred.setOnClickListener { StarredMessagesActivity.launch(context) }
+        rlAnalyse.setOnClickListener {
+            showToast(context, R.string.in_future_versions)
+        }
 
-        rlAccounts.setOnClickListener { AccountsActivity.launch(context) }
+        rlStarred.setOnClickListener {
+            StarredMessagesActivity.launch(context)
+        }
+
+        rlAccounts.setOnClickListener {
+            AccountsActivity.launch(context)
+        }
+
         rlGeneral.setOnClickListener {
             GeneralActivity.launch(context)
             suggestJoin()
         }
+
         rlNotifications.setOnClickListener {
             NotificationsActivity.launch(context)
             suggestJoin()
         }
+
         rlAppearance.setOnClickListener {
             AppearanceActivity.launch(context)
             suggestJoin()
         }
+
         rlPin.setOnClickListener {
             onPinClicked()
         }
@@ -81,6 +95,8 @@ class FeaturesFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        updateTitle(getString(R.string.settings))
         insetViewModel?.topInset?.observe(viewLifecycleOwner, Observer { top ->
             rlAccounts.setTopMargin(top)
         })

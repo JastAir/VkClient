@@ -19,7 +19,7 @@
 
     <item
         android:id="@+id/menu_profile"
-        android:icon="@drawable/ic_features_2"
+        android:icon="@drawable/ic_my_profile"
         android:title="@string/profile" />
 
 </menu>

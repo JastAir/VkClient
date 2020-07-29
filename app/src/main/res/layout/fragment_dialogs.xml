@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/flContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <include layout="@layout/toolbar" />
-
-    <com.fdev.vkclient.views.XviiSwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:clipToPadding="false">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvDialogs"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_marginTop="24dp"
+            app:title="@string/dialogs"
+            fontPath="fonts/Rubik-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/toolbar"
+            android:elevation="4dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitleTextAppearance="@style/ToolbarSubtitleTextAppearance"
+            app:theme="@style/AppTheme.ToolBar"
+            app:titleTextAppearance="@style/ToolbarTitleTextAppearance" />
+
+        <com.fdev.vkclient.views.XviiSwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clipToPadding="false" />
+            android:clipToPadding="false">
 
-    </com.fdev.vkclient.views.XviiSwipeRefreshLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDialogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false" />
+
+        </com.fdev.vkclient.views.XviiSwipeRefreshLayout>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
