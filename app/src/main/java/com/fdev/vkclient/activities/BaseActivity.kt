@@ -11,12 +11,14 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.fdev.vkclient.App.Companion.context
 import com.fdev.vkclient.R
 import com.fdev.vkclient.managers.Prefs
 import com.fdev.vkclient.utils.ExceptionHandler
 import com.fdev.vkclient.utils.NightModeHelper
 import com.fdev.vkclient.utils.stylize
 import com.fdev.vkclient.utils.stylizeAll
+import com.google.firebase.analytics.FirebaseAnalytics
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
@@ -89,4 +91,10 @@ abstract class BaseActivity : AppCompatActivity() {
         )
     }
 
+    fun firebaseSendEvent(key: String, value: String) {
+        val params = Bundle()
+        params.putString(key, value)
+        FirebaseAnalytics.getInstance(context)
+                .logEvent(FirebaseAnalytics.Event.SELECT_ITEM, params)
+    }
 }

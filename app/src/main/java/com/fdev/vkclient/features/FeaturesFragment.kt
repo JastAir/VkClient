@@ -1,14 +1,12 @@
 package com.fdev.vkclient.features
 
-import android.content.Context
-import android.content.Intent
+
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.fdev.vkclient.App
@@ -29,8 +27,8 @@ import com.fdev.vkclient.managers.Session
 import com.fdev.vkclient.pin.PinActivity
 import com.fdev.vkclient.utils.*
 import com.fdev.vkclient.web.WebActivity
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.fragment_features.*
-import java.util.*
 import javax.inject.Inject
 
 class FeaturesFragment : BaseFragment() {
@@ -54,41 +52,57 @@ class FeaturesFragment : BaseFragment() {
         viewModel.loadAccount()
 
         rlAnalyse.setOnClickListener {
+            firebaseSendEvent("features_analyse", "onClick")
             showToast(context, R.string.in_future_versions)
         }
 
         rlStarred.setOnClickListener {
+            firebaseSendEvent("features_starred", "onClick")
             StarredMessagesActivity.launch(context)
         }
 
         rlAccounts.setOnClickListener {
+            firebaseSendEvent("features_accounts", "onClick")
             AccountsActivity.launch(context)
         }
 
         rlGeneral.setOnClickListener {
+            firebaseSendEvent("features_general", "onClick")
             GeneralActivity.launch(context)
             suggestJoin()
         }
 
         rlNotifications.setOnClickListener {
+            firebaseSendEvent("features_notifications", "onClick")
             NotificationsActivity.launch(context)
             suggestJoin()
         }
 
         rlAppearance.setOnClickListener {
+            firebaseSendEvent("features_appearance", "onClick")
             AppearanceActivity.launch(context)
             suggestJoin()
         }
 
         rlPin.setOnClickListener {
+            firebaseSendEvent("features_onPin", "onClick")
             onPinClicked()
         }
 
         rlFeedback.setOnClickListener { ChatActivity.launch(context, -App.GROUP, getString(R.string.app_name)) }
         rlRate.setOnClickListener { context?.also { rate(it) } }
-        rlContribute.setOnClickListener { AssistActivity.launch(context) }
-        rlShare.setOnClickListener { share() }
-        rlPrivacy.setOnClickListener { resolvePrivacyPolicy() }
+        rlContribute.setOnClickListener {
+            firebaseSendEvent("features_contribute", "onClick")
+            AssistActivity.launch(context)
+        }
+        rlShare.setOnClickListener {
+            firebaseSendEvent("features_share", "onClick")
+            share()
+        }
+        rlPrivacy.setOnClickListener {
+            firebaseSendEvent("features_resolvePrivacyPolicy", "onClick")
+            resolvePrivacyPolicy()
+        }
 
         rlRoot.stylizeAll()
     }
@@ -175,18 +189,12 @@ class FeaturesFragment : BaseFragment() {
     }
 
     private fun resolvePrivacyPolicy() {
-        val url = if (Locale.getDefault() == Locale("ru", "RU")) {
-            PRIVACY_RU
-        } else {
-            PRIVACY_WORLD
-        }
-        WebActivity.launch(context, url, getString(R.string.privacy_policy))
+        WebActivity.launch(context, PRIVACY_WORLD, getString(R.string.privacy_policy))
     }
 
     companion object {
 
-        const val PRIVACY_WORLD = "https://github.com/fdev/vkclient/blob/master/privacy.md"
-        const val PRIVACY_RU = "https://github.com/fdev/vkclient/vkclient/master/privacy_ru.md"
+        const val PRIVACY_WORLD = "https://github.com/JastAir/OpenFiles/blob/master/vkClientPolitics"
 
         const val SHOW_JOIN_DELAY = 3600 * 24 * 7 // one week
 

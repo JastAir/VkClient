@@ -16,6 +16,7 @@ import com.fdev.vkclient.activities.BaseActivity
 import com.fdev.vkclient.activities.ContentActivity
 import com.fdev.vkclient.features.FeaturesFragment
 import com.fdev.vkclient.utils.stylize
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.toolbar.*
 
 abstract class BaseFragment : Fragment() {
@@ -75,8 +76,7 @@ abstract class BaseFragment : Fragment() {
             ViewCompat.setOnApplyWindowInsetsListener(toolbar) { view, insets ->
                 view.setPadding(0, insets.systemWindowInsetTop, 0, 0)
                 view.layoutParams.apply {
-                    val toolbarHeight = context?.resources?.getDimensionPixelSize(R.dimen.toolbar_height)
-                            ?: 0
+                    val toolbarHeight = context?.resources?.getDimensionPixelSize(R.dimen.toolbar_height) ?: 0
                     height = toolbarHeight + insets.systemWindowInsetTop
                     view.layoutParams = this
                 }
@@ -100,5 +100,11 @@ abstract class BaseFragment : Fragment() {
     fun updateTitle(title: String = "", subtitle: String = "") {
         baseActivity?.supportActionBar?.title = title
         baseActivity?.supportActionBar?.subtitle = subtitle
+    }
+
+    fun firebaseSendEvent(key: String, value: String) {
+        val params = Bundle()
+        params.putString(key, value)
+        context?.let { FirebaseAnalytics.getInstance(it) }?.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, params)
     }
 }

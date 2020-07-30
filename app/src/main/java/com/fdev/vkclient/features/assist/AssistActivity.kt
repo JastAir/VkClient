@@ -61,7 +61,7 @@ class AssistActivity : BaseActivity() {
 
     companion object {
 
-        const val TEST_ID = "ca-app-pub-3940256099942544/5224354917"
+        const val TEST_ID = "ca-app-pub-2911325501006824/4068382224"
         const val ACTUAL_ID = BuildConfig.AD_ID
 
         fun launch(context: Context?) {

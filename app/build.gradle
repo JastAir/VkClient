@@ -9,14 +9,14 @@ apply plugin: 'com.google.gms.google-services'
 def appCompat = '1.0.0-beta01'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     buildToolsVersion appCompat
     defaultConfig {
         applicationId "com.fdev.vkclient"
         minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 162
-        versionName "5.18.2"
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         project.ext.set("archivesBaseName", "vkclient" + defaultConfig.versionName)
 
